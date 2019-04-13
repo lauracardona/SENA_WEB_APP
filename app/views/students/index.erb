@@ -1,0 +1,38 @@
+<style>
+table {
+   width: 50%;
+   border: 1px solid #000;
+}
+th, td {
+   width: 25%;
+   text-align: left;
+   vertical-align: top;
+   border: 1px solid #000;
+   border-spacing: 0;
+}
+</style>
+<h2>listado de estudiantes</h2>
+
+
+<table>
+    <thead>
+    <tr>
+    <th> nombre</th>
+    <th> fecha nacimiento</th>
+    <th> programa</th>
+    <th>correo</th>
+    </tr>
+    </thead>
+</table>
+
+<tbody>
+    <% @students.each do |student| %>
+
+    <tr>
+    <td><%= student.nombre %><td>
+    <td><%= student.programa %></td>
+    <td><%= student.fecha_nacimiento %></td>
+    <td><%= student.correo %></td>
+    </tr>
+    <% end %>
+</tbody>
