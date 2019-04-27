@@ -20,9 +20,9 @@ th, td {
 }
 </style>
 <body>
-<h2>listado de estudiantes</h2>
+<h2>listado de profesores</h2>
 
-<%@students %>
+<%@taechers %>
 <table>
     <thead>
     <tr>
@@ -35,13 +35,13 @@ th, td {
 
 
 <tbody>
-    <% @students.each do |student| %>
+    <% @teachers.each do |teacher| %>
 
     <tr>
-    <td><%= student.nombre %><td>
-    <td><%= student.programa %></td>
-    <td><%= student.fecha_nacimiento %></td>
-    <td><%= student.correo %></td>
+    <td><%= teacher.nombre %><td>
+    <td><%= teacher.programa %></td>
+    <td><%= teacher.fecha_nacimiento %></td>
+    <td><%= teacher.correo %></td>
     </tr>
     <% end %>
 </tbody>

@@ -1,4 +1,4 @@
-class Student < Storage::Base 
+class Teacher < Storage::Base 
     attr_accessor :nombre, :programa, :fecha_nacimiento, :correo
 
     def initialize(nombre, programa, fecha_nacimiento, correo)
@@ -9,6 +9,6 @@ class Student < Storage::Base
     end
 
     def self.table_name
-        'students'
+        'teacher'
     end
 end
