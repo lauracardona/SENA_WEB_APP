@@ -1,0 +1,25 @@
+
+<h2>listado de estudiantes</h2>
+
+<%@students %>
+<table>
+    <thead>
+        <tr>
+            <th>nombre</th>
+            <th>programa</th>
+            <th>fecha nacimiento</th>
+            <th>correo</th>
+         </tr>
+    </thead>
+    <tbody>
+        <% @students.each do |student| %>
+        <tr>
+            <td><%= student.nombre %><td>
+            <td><%= student.programa %></td>
+            <td><%= student.fecha_nacimiento %></td>
+            <td><%= student.correo %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<a href="/students/new">Nuevo estudiante</a>

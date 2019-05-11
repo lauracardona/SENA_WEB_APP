@@ -1,6 +1,8 @@
 class TeachersController < ApplicationController
 
-    set :views, File.join(APP_ROOT, 'app', 'views','teachers')
+    Tilt.register Tilt::ERBTemplate, "html.erb"
+
+    set :views, File.join( APP_ROOT, 'app', 'views', 'teachers')
 
     get '/' do
         @teachers = Teacher.all
